@@ -48,31 +48,31 @@ class Equip:
         if screen_height - y > 410:
             mod = 0
         else:
-            mod = -1
+            mod = 1
 
-        pygame.draw.rect(sc, [255, 255, 255], (x, y, 200, 400))
+        pygame.draw.rect(sc, [255, 255, 255], (x, y - 400*mod, 200, 400))
 
         text = font.render(self.name, 1, [0, 0, 0])
-        sc.blit(text, (x + 10, y + 20))
+        sc.blit(text, (x + 10, y + 20 - 400*mod))
 
         h_mod = 1
 
         if self.dmg > 0:
             text = font.render("+" + str(self.dmg) + " dmg", 1, [0, 0, 0])
-            sc.blit(text, (x + 10, y + 20 + 40 * h_mod))
+            sc.blit(text, (x + 10, y + 20 + 40 * h_mod - 400*mod))
             h_mod += 1
 
         if self.armor > 0:
             text = font.render("+" + str(self.armor) + " armor", 1, [0, 0, 0])
-            sc.blit(text, (x + 10, y + 20 + 40 * h_mod))
+            sc.blit(text, (x + 10, y + 20 + 40 * h_mod - 400*mod))
             h_mod += 1
 
         if self.hp > 0:
             text = font.render("+" + str(self.hp) + " max hp", 1, [0, 0, 0])
-            sc.blit(text, (x + 10, y + 20 + 40 * h_mod))
+            sc.blit(text, (x + 10, y + 20 + 40 * h_mod - 400*mod))
             h_mod += 1
 
         if self.mana > 0:
             text = font.render("+" + str(self.mana) + " max mana", 1, [0, 0, 0])
-            sc.blit(text, (x + 10, y + 20 + 40 * h_mod))
+            sc.blit(text, (x + 10, y + 20 + 40 * h_mod - 400*mod))
             h_mod += 1

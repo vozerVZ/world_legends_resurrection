@@ -84,7 +84,7 @@ test_location_down = location.Location("test_location_down.txt")
 locations.append(test_location_down)
 
 inv = inventory.Inv()
-hero = player.Player(850, 350, locations, inv)
+hero = player.Player(150, 430, locations, inv)
 
 
 f = open("res/saves/save_default.txt", "r")

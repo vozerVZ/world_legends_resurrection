@@ -234,6 +234,7 @@ class Entity:
                 while True:
                     self.x_dest = random.randint(self.x_left_corner, self.x_right_corner)
                     self.y_dest = random.randint(self.y_left_corner, self.y_right_corner)
+                    print(self.x_dest, self.y_dest)
                     if self.relief_matrix[self.y_dest][self.x_dest] == '0':
                         break
 
